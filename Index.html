@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Document</title>
+
+<style type="text/css">
+
+html, body
+{
+height: 100%;
+width: 100%;
+}
+
+body
+{
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.Botao
+{
+background-color: red;
+height: 50px;
+width: 100px;
+color: white;
+border-radius: 50px;
+}
+
+.Botao:hover 
+{
+background-color: blue;
+}
+
+
+</style>
+
+<script type="text/javascript">
+
+
+
+function Teste(param)
+{
+
+var a = param;
+var b = Math.floor(Math.random() * 3);
+
+console.log(b);
+
+switch(b)
+{
+	case 0:
+    document.getElementById('Imagem2').src = "1.png";
+	break;
+
+	case 1:
+	document.getElementById('Imagem2').src = "2.png";
+	break;
+
+	case 2:
+	document.getElementById('Imagem2').src = "3.png";
+	break;
+}
+
+
+if (a == 0 & b == 0)
+{
+document.getElementById('Placar').innerHTML  = "Empate!";
+}
+else if (a == 1 & b == 1)
+{
+document.getElementById('Placar').innerHTML  = "Empate!";
+}
+else if (a == 2 & b == 2)
+{
+document.getElementById('Placar').innerHTML  = "Empate!";
+}
+else if (a == 0 & b == 1)
+{
+document.getElementById('Placar').innerHTML  = "Ganhou!";
+}
+else if (a == 1 & b == 2)
+{
+document.getElementById('Placar').innerHTML  = "Ganhou!";
+}
+else if (a == 2 & b == 0)
+{
+document.getElementById('Placar').innerHTML  = "Ganhou!";
+}
+else if (a == 0 & b == 2)
+{
+document.getElementById('Placar').innerHTML  = "Perdeu!";
+}
+else if (a == 1 & b == 0)
+{
+document.getElementById('Placar').innerHTML  = "Perdeu!";
+}
+else if (a == 2 & b == 1)
+{
+document.getElementById('Placar').innerHTML  = "Perdeu!";
+}
+
+
+
+}
+
+
+function Pedra()
+{
+document.getElementById('Imagem1').src = "1.png";
+Teste(0);
+}
+
+function Tesoura()
+{
+document.getElementById('Imagem1').src = "2.png";
+Teste(1);
+}
+
+function Papel()
+{
+document.getElementById('Imagem1').src = "3.png";
+Teste(2);
+}
+
+
+
+</script>
+
+
+</head>
+<body>
+
+<h1 id="Placar">Placar</h1>
+
+<img src="1.png" id="Imagem1">
+
+<button class="Botao" onclick="Pedra()">Pedra</button>
+<button class="Botao" onclick="Tesoura()">Tesoura</button>
+<button class="Botao" onclick="Papel()">Papel</button>
+
+<img src="1.png" id="Imagem2">
+
+
+</body>
+</html>
